@@ -8,11 +8,11 @@ Este é um projeto C de exemplo para sistemas Linux embarcados. A aplicação im
 
 ## Estrutura do Projeto
 
-meu_projeto_linux_embarcado/
-├── Makefile        # Define como compilar o projeto
-├── README.md       # Este arquivo
-└── src/
-└── main.c      # O código fonte principal
+meu_projeto_linux_embarcado/                          
+├── Makefile        # Define como compilar o projeto                
+├── README.md       # Este arquivo                   
+└── src/                     
+└── main.c      # O código fonte principal              
 
 
 ## Pré-requisitos
