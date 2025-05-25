@@ -30,6 +30,40 @@ SRCS = $(wildcard $(SRC_DIR)/*.c)
 # Arquivos objeto (substitui .c por .o)
 OBJS = $(SRCS:.c=.o)
 
+
+## Como rodar este projeto no Windows usando WSL
+
+Se você está usando Windows, este programa só funcionará corretamente em um ambiente Linux, pois depende do arquivo `/proc/uptime`.  
+Você pode usar o **WSL (Windows Subsystem for Linux)** para rodar o código sem problemas.
+
+### Passos para rodar no WSL
+
+1. **Abra o terminal do WSL**  
+   Procure por "Ubuntu" ou sua distribuição Linux no menu iniciar do Windows.
+
+2. **Acesse a pasta do projeto**  
+   No terminal do WSL, navegue até a pasta do projeto. Por exemplo:
+   ```bash
+   cd /mnt/c/Users/Diego/Downloads/meu_projeto_linux_embarcado/src
+   ```
+
+3. **Instale o GCC (caso ainda não tenha)**  
+   ```bash
+   sudo apt update && sudo apt install gcc -y
+   ```
+
+4. **Compile o programa**  
+   ```bash
+   gcc main.c -o main
+   ```
+
+5. **Execute o programa**  
+   ```bash
+   ./main
+   ```
+
+Assim, o programa conseguirá acessar `/proc/uptime` normalmente e mostrar as informações do sistema.
+
 # --- Regras do Makefile ---
 
 # Regra padrão: compila tudo
@@ -53,3 +87,4 @@ clean:
 
 # Phony targets não são nomes de arquivos reais
 .PHONY: all clean
+
